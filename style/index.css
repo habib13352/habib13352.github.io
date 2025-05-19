@@ -1,36 +1,63 @@
+:root {
+  --bg: #121212;
+  --fg: #e0e0e0;
+  --accent: #0a66c2; /* LinkedIn blue—for buttons or accents */
+  --btn-hover: rgba(255,255,255,0.1);
+  --font-sans: 'Inter', sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --btn-hover: rgba(0,0,0,0.05);
+  }
+}
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #333;
-}
-
-header {
-  background-color: #111;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #ccc;
-}
-
-nav a:hover {
-  color: #fff;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: 1.5;
 }
 
 .hero {
-  padding: 3rem 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 1rem;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f1f1f1;
-  color: #555;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
-/* This is a comment */
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.cta a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s;
+}
+
+.cta a:hover {
+  background: var(--btn-hover);
+}
