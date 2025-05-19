@@ -1,0 +1,11 @@
+- title: "SketchNC Plotter"
+  year: 2024
+  description: "2D pen-plotter with ESP32 & FluidNC"
+  repo:   "https://github.com/habib13352/SketchNC"
+  demo:   "/assets/img/sketchnc-demo.gif"
+
+- title: "FlappyCar v2.4"
+  year: 2025
+  description: "Retro Python/Pygame game"
+  repo:   "https://github.com/habib13352/flappycar"
+  demo:   "/assets/img/flappycar.gif"

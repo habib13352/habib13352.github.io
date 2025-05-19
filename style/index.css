@@ -1,63 +1,134 @@
 :root {
   --bg: #121212;
   --fg: #e0e0e0;
-  --accent: #0a66c2; /* LinkedIn blue—for buttons or accents */
-  --btn-hover: rgba(255,255,255,0.1);
+  --accent: #0a66c2;
+  --muted: #888;
   --font-sans: 'Inter', sans-serif;
+  --gap: 1.5rem;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #ffffff;
-    --fg: #111111;
-    --btn-hover: rgba(0,0,0,0.05);
+    --bg: #fff;
+    --fg: #111;
+    --muted: #555;
   }
 }
 
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-}
-
+/* RESET + BASE */
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
   line-height: 1.5;
 }
-
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem;
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* NAV */
+.nav {
+  padding: var(--gap) 0;
+}
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: var(--gap);
+}
+.nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+.nav a.active,
+.nav a:hover {
+  color: var(--accent);
+}
+.nav a.active::after,
+.nav a:hover::after {
+  content: '';
+  position: absolute;
+  left:0; right:0; bottom:0;
+  height:2px;
+  background: var(--accent);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
-
 .hero p {
-  font-size: 1.25rem;
+  color: var(--muted);
   margin-bottom: 2rem;
-  max-width: 600px;
 }
 
-.cta a {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--accent);
+/* PROJECTS GRID */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+.project {
+  padding: 1rem;
+  border: 1px solid var(--muted);
   border-radius: 4px;
   text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.project .title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.project time {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.project:hover {
+  border-color: var(--accent);
   color: var(--accent);
-  transition: background 0.2s, color 0.2s;
+  background: rgba(10,102,194,0.05);
 }
 
-.cta a:hover {
-  background: var(--btn-hover);
+/* BACK TO TOP */
+.back-to-top a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.back-to-top a:hover {
+  color: var(--fg);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: var(--gap) 0;
+  border-top: 1px solid var(--muted);
+}
+.footer p {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+.footer a {
+  margin: 0 var(--gap);
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+}
+.footer a:hover {
+  color: var(--accent);
 }
