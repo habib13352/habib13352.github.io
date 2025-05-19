@@ -3,7 +3,7 @@ description: "EET Graduate • CNC maker • Python dev"
 baseurl: ""
 url: "https://habib13352.github.io"
 
-theme: minima
+#theme: minima
 markdown: kramdown
 permalink: pretty
 
