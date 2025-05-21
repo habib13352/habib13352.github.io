@@ -4,14 +4,15 @@ title: Home
 ---
 
 <section class="hero">
-  ![Headshot](/assets/img/headshot.jpg){: .avatar }
+  <!-- ![Headshot](/assets/img/headshot.jpg){: .avatar } -->
   # Hi, I’m Hamza
   _EET Graduate • Maker • Python Dev_
 </section>
 
 <section class="about">
 I build Python games, design CNC machines, and love embedded systems.  
-Check out my projects below or [contact me](/contact){: .link }.
+Check out my projects below 
+<!-- or [contact me](/contact){: .link }. -->
 </section>
 
 <section class="projects">
