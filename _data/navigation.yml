@@ -1,0 +1,9 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Contact"
+    url: /contact/
+  - title: "GitHub"
+    url: https://github.com/habib13352
+  - title: "LinkedIn"
+    url: https://www.linkedin.com/in/hamza-habib-a34a172a2

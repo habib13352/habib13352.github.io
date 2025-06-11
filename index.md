@@ -1,31 +1,29 @@
 ---
-layout: default
-title: Home
+layout: single
+title: "Hamza Habib"
+permalink: /
+author_profile: true
 ---
 
-<section class="hero">
-  <!-- ![Headshot](/assets/img/headshot.jpg){: .avatar } -->
-  <h1>Hi, I’m Hamza</h1>
-  <p>EET Graduate • Maker • Python Dev</p>
-</section>
+## About Me
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I build Python games, design CNC machines, and love embedded systems.<br>
-    Check out my projects below!
-  </p>
-  <!-- <a href="/contact" class="link">Contact me</a> -->
-</section>
+Technologist and musician passionate about creative engineering. I build custom devices, teach guitar, and enjoy problem solving and learning. Actively looking for full-time roles in electronics, systems, or product engineering.
 
-<section class="projects">
-  <h2>Projects</h2>
-  {% for p in site.data.projects %}
-  <div class="project-card">
-    <h3>{{ p.title }} <small>({{ p.year }})</small></h3>
-    <p>{{ p.description }}</p>
-    <a href="{{ p.repo }}" target="_blank">Code</a>
-    {% if p.demo %} • <a href="{{ p.demo }}" target="_blank">Demo</a>{% endif %}
-  </div>
-  {% endfor %}
-</section>
+## Technical Stack
+
+**Languages & Markup:** C, C++, Python, HTML/CSS, JavaScript (basics), G-code, XML  
+**Microcontrollers & Platforms:** ESP32 (WROOM/S3), Arduino, FRDM-K64, LabJack (U9/U3 basics)  
+**Tools & IDEs:** VS Code, Arduino IDE, PlatformIO, Git & GitHub, FluidNC, OpenCV, Pygame  
+**Simulation & Design:** EAGLE CAD, OrCAD, MATLAB, Bambu Studio, Intel Quartas, Fusion 360
+
+## Projects
+
+{% for p in site.data.projects %}
+- **{{ p.title }} ({{ p.year }})** – {{ p.description }} [Code]({{ p.repo }}){% if p.demo %} – [Demo]({{ p.demo }}){% endif %}
+{% endfor %}
+
+## Education
+
+- **Seneca Polytechnic** – Adv. Diploma, Electronic Engineering Technology (2024)  
+- **York University** – BFA Music (2022)
+
