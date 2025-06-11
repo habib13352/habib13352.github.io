@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Contact
 permalink: /contact/
 ---
@@ -11,3 +11,4 @@ permalink: /contact/
   <textarea name="message" rows="5" placeholder="Message…" required></textarea>
   <button type="submit">Send</button>
 </form>
+

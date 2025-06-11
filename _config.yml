@@ -3,10 +3,28 @@ description: "EET Graduate • CNC maker • Python dev"
 baseurl: ""
 url: "https://habib13352.github.io"
 
-#theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.27.0"
+plugins:
+  - jekyll-include-cache
+
 markdown: kramdown
 permalink: pretty
 
 collections:
   projects:
     output: true
+
+author:
+  name: "Hamza Habib"
+  location: "Toronto, Canada"
+  bio: "Technologist and musician passionate about creative engineering."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/habib13352"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hamza-habib-a34a172a2"
+
+# minimal style settings
+minimal_mistakes_skin: dark
